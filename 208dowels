@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+# 
+# EPITECH PROJECT, 2020
+# 208dowels_2019
+# File description:
+# 208dowels
+# 
+
+
+import sys
+import math
+
+def check_for_err():
+    halp = open("help", "r")
+
+    if len(sys.argv) > 1 and sys.argv[1] == "-h":
+        print(halp.read(), end = '')
+        sys.exit(0)
+    if len(sys.argv) < 2:
+        print("Flag error. Try -h for more informations.")
+        sys.exit(84)
+    flag = []
+    for i in range(1, len(sys.argv)):
+        try:
+            flag.append(int(sys.argv[i]))
+        except ValueError:
+            print("Flag error. Try -h for more informations.")
+            sys.exit(84)
+        if (float(sys.argv[i]) <= 0):
+            sys.exit(84)
+    if (sum(flag) != 0):
+        sys.exit(84)
+    return flag
+
+def display(res):
+    pass
+
+def calc(val):
+    res = { "x": [[]], "0x": [0], "Tx": [], "dist": [], "chi_qu": 0.0, "deg": 0, "fit_val": []}
+    print(val)
+
+    return 0
+
+def main():
+    x = check_for_err()
+
+    calc(x)
+
+if __name__ == "__main__":
+    main()
